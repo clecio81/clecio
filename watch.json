@@ -1,0 +1,13 @@
+{
+  "install": {
+    "include": ["^package\\.json$", "^\\.env$"]
+  },
+  
+  
+  "restart": {
+    "exclude": ["^private/", "^dist/"],
+    "include": ["\\.js$", "\\.json"]
+  }
+  }
+
+

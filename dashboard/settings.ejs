@@ -1,0 +1,86 @@
+<%- include("includes/cabeca", { bot, user, path}) %>
+
+<head>
+  <script data-ad-client="ca-pub-5060094133374811" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  </head>
+<% if(alert) { %>
+
+<br><div class="alert alert-success">
+
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+
+  <strong>Sucesso </strong> <%= alert %>
+
+</div>
+
+<% } %>
+
+<script>
+
+window.setTimeout(function() {
+
+    $(".alert").fadeTo(500, 0).slideUp(500, function(){
+
+        $(this).remove(); 
+
+    });
+
+}, 2000);
+
+</script>
+
+
+<body>
+
+<div class="container jumbotron text-center bg-transparent">
+
+  <% if(guild.icon) { %>
+
+  <img src="<%= `https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.png?size=128` %>"
+
+    style="border-radius: 50%;">
+
+  <% } %>
+
+  <h1 class="display-4"><span><%= guild.name %></span></h1>
+
+</div>
+
+<hr style="position: relative; top: -40px;">
+  <div class="list-group">
+
+    <a href="/mod" class="list-group-item ">moderação</a>
+
+    <a href="/dashboard/<%= guild.id %>/level
+
+" class="list-group-item">level</a>
+
+    <a href="/dashboard/<%= guild.id %>/welcome
+" class="list-group-item">bem-vindo/tchau</a>
+
+  </div>
+
+</div>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<!-- anúncios -->
+
+<ins class="adsbygoogle"
+
+     style="display:block"
+
+     data-ad-client="ca-pub-5060094133374811"
+
+     data-ad-slot="5415636108"
+
+     data-ad-format="auto"
+
+     data-full-width-responsive="true"></ins>
+
+<script>
+
+     (adsbygoogle = window.adsbygoogle || []).push({});
+
+</script>
+  </body>
+</div>

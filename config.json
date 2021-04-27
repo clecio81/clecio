@@ -1,0 +1,14 @@
+{
+   "redirectUri":"https://clecio-website.glitch.me/authorize/callback",
+   "clientId":"695760577485733910",
+  "clientSecret":"0jxuqg264EqO4djHvWd5g-HWuhDG736X",
+  "dprefix": "c!",
+
+  "id": "695760577485733910",
+
+
+  "domain": "https://clecio-website.glitch.me",
+
+  "port": 3000,
+  "scopes": ["identify", "guilds"]
+  }

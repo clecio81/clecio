@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<heade>
+<title>Clécio 2.0</title>
+<meta charset="UTF-8">
+    <meta name="description" content="Um bot brasileiro focado em moderação e diversão para o seu servidor discord (Clécio 2.0)">
+<%- include("includes/cabeca", { bot, user, path}) %>
+
+  <link
+
+      rel="icon"
+
+      href="https://cdn.discordapp.com/avatars/695760577485733910/22bf4d904c0ef2749710976c90baad7d.webp?size=2048"/>
+
+
+  <meta name="keywords" content="discord.js,discord bot, Clécio, Clécio 2.0,JavaScript">
+
+  <meta name="author" content="Clécio Santos">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  </heade>
+        <div>
+
+        <div class="container">
+
+            <h5 class="text-center" style="color: #76ACEC">Escolha um servidor</h5>
+
+        </div>
+
+        <br><br>
+
+          
+
+          <%for(let x = 0; x < user.guilds.length; x++) {%>
+
+          
+
+          <%const newPerm = new perms(user.guilds[x].permissions)%>
+
+          
+
+          <%if(newPerm.has("MANAGE_GUILD") || newPerm.has("ADMINISTRATOR") || user.guilds[x].owner == true ) {%>
+
+
+          <div class="card" style="width: 16rem; display:inline-block; margin:10px; border-radius: 25px; color: black;">
+
+                <a href="dashboard/<%=user.guilds[x].id%>" class="card-link">
+
+                <div class="card-body">
+
+                  <%if(!user.guilds[x].icon) {%>
+
+                <img class="card-img-top mb-3 rounded-circle" src="https://png.pngtree.com/svg/20161018/e502608f8b.png" alt="<%=user.guilds[x].name%>" style="
+
+                width: 130px;
+
+                ">
+
+                  
+
+                  <%} else {%>
+
+                <img class="card-img-top mb-3 rounded-circle" src="https://cdn.discordapp.com/icons/<%=user.guilds[x].id%>/<%=user.guilds[x].icon%>" alt="<%=user.guilds[x].name%>" style="
+
+                width: 130px;
+
+                ">
+
+                  <%}%>
+
+                </a>
+
+                <h5 class="card-title" id="nome"><%=user.guilds[x].name%></h5>
+
+                     <%if(bot.guilds.cache.get(user.guilds[x].id)){%>
+
+                          
+
+                  
+
+                  <a href="dashboard/<%=user.guilds[x].id%>" class="card-link">
+
+                      <i class="fas fa-tools"></i> Configurar
+                    
+
+                  </a>
+
+                  
+<%}else{%>
+                                      <a href="/invite" target="_blank" class="card-link">
+
+                        <i class="fas fa-plus"></i> Adicionar
+
+                    </a>
+
+                  
+<%}%>
+                  
+
+
+
+              </div>
+
+            </div>
+
+      <%}%>    
+
+          <%}%>
+
+                    
+
+</html>
