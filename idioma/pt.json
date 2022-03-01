@@ -1,0 +1,251 @@
+{    
+    "title": "Uso do comando",
+    "Error": ["❎ | Ah não, ocorreu um erro: ", ". Tente novamente mais tarde."],
+    "titleComp": "Concluído :white_check_mark:",
+    "info": "Informação de ",
+    "click": "Clique aqui",
+    "noA": ["O usuário ", " não tem foto de perfil."],
+    "Dow": "Baixar",
+  "adm":"Moderadores de",
+  "mencionar":"Mencione um usuário",
+    "per": {
+      "all": "❌ **| Você não tem permissões para usar este comando.**"
+    },
+  "click":"click aqui",
+  "ban":{
+  "s" :"O usuário {user} foi banido com sucesso",
+    "botnao":"Não consigo banir este usuário"
+  },
+  "daily":{
+    "on":"Você resgatou seus Cl's hoje,volte em {hrs}",
+    "off":"Peguei seus Cl's aqui {link}",
+    "horas":"horas",
+    "minutos":"minutos",
+    "segundos":"segundos"
+    },
+  "profile":{
+    "loading":"Carregando o perfil do usuário {{user}}.Por favor, aguarde...",
+    "erro":"Ocorreu um erro desconhecido. Se o erro persistir,reporte ao suporte"
+    },
+   "compras":{
+     "err":"Você não possue cl's suficiente para comprar um(a) {item}\n{link} para consegui mais cl's",
+     "cls":"Você precisa de {cls} para comprar um(a) {item}",
+     "sim":" Você acabou de comprar um(a)  {item}"
+  },
+  "lim":{
+    "limsu":"Foram apagandas {ms} mensagens",
+    "limerro":"Indique uma quantidade de mensagens,Ex {prefix}clear 10"
+    },
+  "logs":{
+    "s":"Logs ativado com sucesso para o canal: {canal}",
+    "logserro":"Mencione um canal"
+    },
+    "pref":"Meu prefixo atual nesse servidor é `{prefixo}`,se estiver com dúvidas use `{prefixo2}help`",
+
+  "cool": "calma ai, espere 3s antes de usar outro comando",
+  "stts":{
+    "dnd": "membros ausente: #numero",
+    "offline":"membros offlinnes: #numero",
+    "afk":"membros afk: #numero"
+    
+    },
+  "level":{
+
+    "ligado": "O sistema de nível foi ativado",
+
+    "desligado": "o sistema de nível foi desativado",
+
+   "setup": "a configuração está pronta, digite o comando novamente para `ativar` ou `desativar` o sistema de leveis"
+    },
+  "aviso":{
+    "mencionar":":x: Você deve mencionar alguém",
+    "motivo":":x: Escreva um motivo, @usuário <motivo>",
+    "logs":":x:Por favor,crie um canal para anunciar os mods-logs",
+    "sucesso":"Aviso enviado com sucesso",
+    "dm":"Você foi avisado no servidor"
+    
+    },
+  "música": { "afk": "Detectamos inatividade, para continuar ouvindo música sem interrupções,utilize {prefixos}afk",
+             "vi": "Visualizações", 
+             "at": "ativado",
+             "de": "Desativado", 
+             "playlist":"Adicionado a playlist",
+             "entrarerro":"Você precisa estar em um canal de voz",
+             "nada":"Pesquise uma música",
+             "falar":"Não tenho permissão para falar",
+             "pesquisaerro":"não consigo encontrar essa música no  YouTube",
+             "tocando":"Tocando",
+             "tem": "Tempo", 
+             "vol": "Volume", 
+             "ped": "solicitado por:", 
+             "nome":"Canal",
+             "er": "Ocorreu um erro",
+             "volume":"Volume atual:",
+             "volumepara":"Volume setado para:"
+            
+            },
+  
+    "func": {
+      "actual": ["O idioma atual no servidor", "é"],
+      "prefix": "O prefix atual no servidor **${guild.name}** é **${prefix}**"
+      },
+    "langu": {
+      "name": "Português",
+      "title": "Idioma"
+    },
+  "banido":"Parece quê você estar proibido de usar os meus comandos,se você não está ciente do seu banimento user {{prefix}}bug para saber o motivo ",
+    "lang": {
+        "langUpdate": "Idioma atualizado."
+    },
+   "ajuda": {
+"ajudamsg":"⚙️ moderação\n🤖 informações do bot\n⚒️ customizado\n💰 economia\n🎉 diversão\n🏠 início"
+},
+    "prefix": {
+        "prefixUpdate": "Prefixo atualizado para",
+        "translate": "O prefixo no servidor **${guild.name}** foi atualizado para **${prefix}** se você quiser alterar o prefixo use novamente **${prefix}prefix <prefixo>**",
+        "title": "Prefixo atual"
+      },
+  "sorteio": { 
+    
+        "advertencia": "advertência alterado para:", 
+        "qual": "quantos avisos?",
+        "nunero2":"qual tempo sorteio? ex:`<1d> <#general> <nitro> você pode usar os tempos com m/h/d(minutos/horas/dias)`",
+        "mcanal": "mencione o canal onde será o sorteio",
+        "numero": "este não é um número", 
+        "premio": "qual será o prêmio?",
+        "semvencedor": "sem gente suficiente para o sorteio", 
+        "parabens": "parabéns {{vencedor}} por ganhar o sorteio", 
+        "sempremio": "indicar qual será o sorteio",
+        "descri": "sorteio criado por {{criador}}", 
+         "tempo":"tempo: {{tempo}}",
+        "descri2":"premio: {{premio}}",
+        "scriado": "sorteio criado no canal {{canal}}", 
+        "numero": "e especifique um número em m (minuto) h (hora) d (dia) s (segundo)" 
+    },
+ 
+    "idioma": {
+      "idiomapergunta": "Qual é a linguagem para estabelecer?",
+      "idiomaerro": "Por favor, introduza um idioma válido!",
+      "idiomaerro2": "idioma não encontrado",
+      "idiomaup": "idioma alterado para "
+    },
+  "BALL": {
+    "usage": [" " , ", o uso correto é: `8ball <questão>`\n| ex. 8ball você é um robo?`"],
+    "preg": "Questão",
+    "res": "Resposta",
+    "ress": ["Sim",
+             "Não", 
+             "Por quê?",
+             "Talvez",
+             "Não sei",
+             "Definitivamente?", 
+             "¡Claro!"
+             ,"Claro que não"]
+  },
+  "about": {
+    "owner": "Proprietário",
+    "Ca": "Canais",
+    "Mem": "Membros",
+    "o":" Ocupados",
+    "a":"Ausentes",
+    "t":"Informações do servidor",
+    "s":"Transmitindo",
+    "time":"Criado em"
+  },
+  "dbl": {
+    "men": "**<:Not:463200957396680714> Mencione um bot**",
+    "uB": "**<:Not:463200957396680714> Você não é um bot**",
+    "nB": "**<:Not:463200957396680714> O usuário {{user}} não é um bot"  
+  },
+  "dbli": {
+    "title": "Informação da DBL",
+    "ID": "ID",
+    "name": "Nome do bot",
+    "tag": "Discriminador",
+    "L": "Pacote",
+    "prefix": "Prefixo",
+    "upvotes": "Votos",
+    "guilds": "Número de servidores",
+    "CB": "Bot certificado",
+    "Tags": "Rótulos",
+    "owner": "Proprietário(s)",
+    "SD": "Breve descrição",
+    "Links": "Links"
+  }, 
+  "ASCII": {
+    "args": "Escreva algo para transformá-lo em texto ascii",
+    "c14": "Você passou os 14 caracteres permitidos!"
+  },
+  "ban": {
+    "men": "**<:Not:463805182648778783> | Você deve mencionar alguém <:bEmoji:440388028939239434>**",
+    "reazon": "**<:Not:463805182648778783> | Escreva um motivo, `{{prefix}}ban @username [motivo]`**",
+    "noBP": "**<:Not:463805182648778783> | Eu não posso proibir o usuário mencionado.**",
+    "noC": "**<:Not:463805182648778783> | Por favor crie o canal para enviar os mod-logs"
+  },
+   "calculated": {
+     "noArgs": "Você deve fornecer uma equação para resolver na calculadora!a",
+     "errorTitle": "¡Falha matemática!",
+     "ErrorM": "Cálculo incorreto!",
+     "sussT": "Matemática Calculada!",
+     "firtsField": "Eu calculei com sucesso:",
+     "secondField": "A resposta é:"    
+   },
+   "dogandcat": {
+     "CatMessage": "Aqui está o seu gato aleatório <:Cat:429724283003207681>",
+     "DogMessage": "Seu cachorro aleatório está aqui"
+   },
+   "clean": {
+     "error": "<:Not:463805182648778783>  | Um bot só pode eliminar mensagens com menos de 14 dias.",
+     "succMessage": "🍇 | **{{username}}**, eliminado com sucesso {{total}} mensagens!"  
+   },
+   "clyde": {
+     "args": "Você deve dar uma descrição para Clyde",
+    "args60": "Eu só posso lidar com um máximo de 60 caracteres",
+     "NoLoad": "Clique aqui se a imagem não foi carregada."  
+   },
+    "Gif": {
+        "noArgs": "Por favor, insira um termo para pesquisar o gif",
+        "search": ":arrows_counterclockwise: Pesquisando...",
+        "noTerms": "¡Eu não encontrei nenhum resultado!",
+        "Title": "Resultado da pesquisa de gifs para: ",
+        "page": "Página {{page}} de {{pagesL}}"
+    },
+     "Github": {
+        "nF": "Nao encontrado",
+        "nE": "O usuário não existe!",
+        "args": "Por favor, forneça um nome de usuário/organização",
+         "infoEmbed": {
+             "f": "Seguidores",
+             "F": "A seguir",
+             "C": "Criado em",
+             "L": "Localização",
+             "Com": "Negócio",
+             "rP": "Repositórios públicos",
+              "WebN": "Site não estabelecido" 
+           }
+       },  
+      "hackban": {
+          "user": "¿Qual usuário você quer hackbane? Digite seu id!",
+          "uB": "¡Por favor, não me bani...!",
+          "uA": "Eu não ousaria te hackear...!",
+          "days": "¿Quantos dias deve esperar para limpar o histórico de mensagens? (máx: 7)",
+          "reason": "¿Qual é o motivo?",
+          "cancel": "¡Comando Cancelado!",
+          "succ": "Banido com sucesso para **{{user}}**! 👋"
+     },
+    "beijo": {
+        "sem": " você precisa mencionar algum usuário",
+      "beijou": "beijou"   },
+    "jumbo": {
+        "Nemoji": "Por favor, forneça um emoji para expandi-lo",
+        "Demoji": "Eu não posso expandir emojis de discord incorporados.",
+        "Iemoji": "Forneça um emoji válido.",
+        "Ni": "¡Eu não consigo identificar o emoji!"
+    },
+  "kick": {
+    "men": "**:x:| Você deve mencionar alguém!**",
+    "reazon": "**:x: | Escreva um motivo, `{{prefix}}kick @username [motivo]`**",
+    "noBP": "**<:Not:463805182648778783> | Eu não posso tirar o usuário mencionado.**",
+    "noC": "**<:Not:463805182648778783> | Por favor, crie o canal para enviar os mod-logs**"
+  }
+}

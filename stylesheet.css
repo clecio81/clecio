@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,500');
+
+body {
+
+    background: #2C2F33;
+
+    margin: 0 0;
+
+    padding: 0 0;
+
+}
+
+.page-content {
+
+    padding: 4px 42px;
+
+}
+
+.page-content h1 { margin-bottom: -10px; }
+
+h1, h2, h3, h4, h5, h6 {
+
+    font-family: 'Roboto', sans-serif;
+
+    font-weight: 500;
+
+    color: #ffffff;
+
+}
+
+p, a {
+
+    font-family: 'Roboto', sans-serif;
+
+    font-weight: 300;
+
+    color: #ffffff;
+
+}
+
+.navbar {
+
+    background: #23272A;
+
+    padding: 21px 42px;
+
+}
+
+.navbar a {
+
+    transition: .25s ease;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+}
+
+.navbar a:hover {
+
+    color: #7792f3;
+
+}
+
+.navbar a:not(:last-child) {
+
+    margin-right: 12px;
+
+}
+
+.navbar .right {
+
+    float: right;
+
+}
+.switch input {display:none;}
+
+.slider {
+
+  position: absolute;
+
+  cursor: pointer;
+
+  top: 0;
+
+  left: 0;
+
+  right: 0;
+
+  bottom: 0;
+
+  background-color: #ca2222;
+
+  -webkit-transition: .4s;
+
+  transition: .4s;
+
+}
+
+.slider:before {
+
+  position: absolute;
+
+  content: "";
+
+  height: 26px;
+
+  width: 26px;
+
+  left: 4px;
+
+  bottom: 4px;
+
+  background-color: white;
+
+  -webkit-transition: .4s;
+
+  transition: .4s;
+
+}
+
+input:checked + .slider {
+
+  background-color: #2ab934;
+
+}
+
+input:focus + .slider {
+
+  box-shadow: 0 0 1px #2196F3;
+
+}
+
+input:checked + .slider:before {
+
+  -webkit-transform: translateX(26px);
+
+  -ms-transform: translateX(26px);
+
+  transform: translateX(26px);
+
+}
+
+/* Rounded sliders */
+
+.slider.round {
+
+  border-radius: 34px;
+
+}
+
+.slider.round:before {
+
+  border-radius: 50%;
+
+html

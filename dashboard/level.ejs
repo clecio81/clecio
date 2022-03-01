@@ -1,0 +1,267 @@
+
+<html>
+  <%- include("includes/cabeca", { bot, user, path}) %>
+<div class="container jumbotron text-center bg-transparent">
+  <% if(guild.icon) { %>
+
+  <img src="<%= `https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.png?size=128` %>"
+
+    style="border-radius: 50%;">
+
+  <% } %>
+
+  <h1 class="display-4"><span><%= guild.name %></span></h1>
+
+</div>
+
+<style>
+
+table {
+
+    background-color:#FFFFFF;
+
+
+}
+
+</style>
+
+
+<script>
+
+  function myFunction() {
+
+    var x = document.getElementById("mySelect").value;
+
+    if (x == 'Canal customizado') {
+
+      document.getElementById("lv_canal").style.display = "block";
+
+    } else {
+
+      document.getElementById("lv_canal").style.display = "none";
+
+    }
+
+  }
+
+  $(document).ready(function() {
+
+    // Load emoji picker
+
+    $("#textarea").emojioneArea({
+
+      pickerPosition: "bottom",
+
+      search: false,
+
+      recentEmojis: false,
+
+      tones: false
+
+    });
+
+  })
+
+</script>
+  
+<% if(alert){%>
+<br><div   class="alert alert-success">
+
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+
+  <strong >Sucesso </strong> Suas configurações foram salvas
+
+</div>
+<%}%>
+<body onload="myFunction()">
+
+  <div class="container-fluid">
+
+    <div class="row">
+
+      <div class="col-lg-3">
+
+      </div>
+
+      <div class="col-lg-6 form-group">
+
+        <h3 style="padding-top: 25px;">Configurar sistema de nível
+        </h3>
+
+
+ <form method="POST">
+
+          <div class="form-row">
+
+            <div class="col-lg-4">
+
+              <div class="h-50">
+
+                <b>ANÚNCIO AO SUBIR DE NÍVEL</b>
+
+                <select name="LevelAnnouncement" class="custom-select" id="mySelect" onchange="myFunction()">
+
+                  <% if (LevelOption == 0) { %>
+
+                    <option selected>Desabilitado</option>
+
+                    <option>Canal atual</option>
+
+                    <option>Canal customizado</option>
+
+                  <% } else if (LevelOption == 1) { %>
+
+                    <option>Desabilitado</option>
+
+                    <option selected>Canal atual</option>
+
+                    <option>Canal customizado</option>
+
+                  <% } else { %>
+
+                    <option>Desabilitado</option>
+
+                    <option>Canal atual</option>
+
+                    <option selected>Canal customizado</option>
+
+                  <% } %>
+
+                </select>
+
+              </div>
+
+              <div class="h-50" style="display: none" id="lv_canal">
+
+                <b>CANAL DE ANÚNCIO</b>
+<br>
+                        
+
+                    <%const saida = bot.guilds.cache.get(guild.id)%>
+
+                      
+
+
+                        <select class="custom-select" id="lv_canal" name= "lv_canal" style="width: 175px;">
+                          
+
+                          <%saida.channels.cache.forEach(channel => {%>
+
+                          <%if(channel.type !== "category"){%>
+
+                      <%if(canal){%>
+
+                            
+                     <option  value="<%= canal.id %>"selected ># <%= canal.name %></option>
+
+
+
+                            <option value="<%=channel.id%>"># <%=channel.name%></option>
+      
+             <% }else{%>
+                           <option value="<%=channel.id%>"># <%=channel.name%></option>
+                          
+      <%}%>
+                          
+
+                          <%}%>
+
+                          <%})%>
+                        </select>
+
+                      </div>
+
+                      </div>
+
+            <div class="col-lg-8">
+
+              <b>MENSAGEM DE ANÚNCIO PARA SUBIR DE NÍVEL</b>
+  <br>
+              <textarea name="lv_mensagem" id='lv_mensagem'class="form-control" rows="3"><%= msg %></textarea>
+
+            </div>
+
+          </div>
+          <br>
+          <button class="btn btn-primary btn-block" type="submit" onclick="showNotification('top','center')" id="button">Salvar</button>
+
+           
+                  </form>
+
+      </div>
+
+      <div class='col-lg-3'>
+        
+<br>
+         <p>Placeholders</p>
+
+<table class="table">
+
+    <thead>
+
+        <tr>
+
+            <th>Placeholder</th>
+
+            <th>Significado</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        <tr>
+
+          <td><code>{username}</code></td>
+
+            <td>Mostra o nome do usuário</td>
+
+        </tr>
+
+        <tr>
+
+            <td><code>{user}</code></td>
+
+            <td>Menciona o usuário</td>
+
+        </tr>
+
+        <tr>
+
+            <td><code>{guild}</code></td>
+
+            <td>Mostra o nome do servidor</td>
+
+        </tr>
+
+        <tr>
+
+            <td><code>{xp}</code></td>
+     <td>Mostra a quantidade de xp do usuário</td>
+
+        </tr>
+
+        <tr>
+
+            <td><code>{need}</code></td>
+
+     <td>Mostra a quantidade de xp necessário para subir de nível</td>
+
+        </tr>
+
+
+    </tbody>
+  
+</table>
+        
+  <!-- Inclusão do jQuery-->
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+<!-- Inclusão do Plugin jQuery Validation-->
+<script src="http://jqueryvalidation.org/files/dist/jquery.validate.js"></script>
+        <!-- Inclusão do Plugin /bootstrap-notify -->
+        <script src="assets/js/plugins/bootstrap-notify.js"></script>
+
+</body>
+      </html>
+    

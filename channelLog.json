@@ -1,0 +1,2 @@
+<db>.set(message.guild.id, args.join(" "))
+let text = await <db>.get(message.guild.id).catch(r=>console.log(r))

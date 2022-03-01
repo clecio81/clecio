@@ -1,0 +1,414 @@
+<%- include("includes/cabeca", { bot, user, path}) %>
+<% if(alert) { %>
+
+<br><div class="alert alert-success">
+
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+
+  <strong>Sucesso </strong> <%= alert %>
+
+</div>
+
+<% } %>
+
+
+<div class="container jumbotron text-center bg-transparent">
+
+  <% if(guild.icon) { %>
+
+  <img src="<%= `https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.png?size=128` %>"
+
+    style="border-radius: 50%;">
+
+  <% } %>
+
+  <h1 class="display-4"><span><%= guild.name %></span></h1>
+
+</div>
+
+<style>
+
+table {
+
+    background-color:#FFFFFF;
+
+}
+
+</style>
+
+
+<div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title" style= "color: black;"
+
+>Editar Mensagem</h4>
+                </div>
+                <div class="card-body">
+                  
+
+  <form>
+                  
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          
+                          <label class="bmd-label-floating"><small style="font-size: 15px;">Mensagem de bem-vindo</small></label>
+                          <textarea class="form-control" rows="3" name="mensagem_entrada" ><%= 
+
+    mensagem_entrada %></textarea>
+                        </div>
+                      </div>
+                    
+                    
+                    <%const entrada = bot.guilds.cache.get(guild.id)%>
+
+                      <div class="form-group">
+                        <label for="canal_entrada">Canal</label><br>
+                        <select class="custom-select" id="canal_entrada" name="canal_entrada" style="width: 175px;">
+                          <%entrada.channels.cache.forEach(channel => {%>
+
+                          <%if(channel.type !== "category"){%>
+
+                          
+
+                          
+                          <%if(canal){%>
+                                                 <option  value="<%= canal.id %>"selected ># <%= canal.name %></option>
+                          
+
+                          
+
+                          
+
+                                                    <option  value="<%=channel.id%>"># <%=channel.name%></option>
+
+                          
+
+  
+                       <%}else{%>
+                        
+                              <option  value="<%=channel.id%>"># <%=channel.name%></option>
+                          <%}%>
+  
+
+                          
+
+                          
+                          <%}%>
+
+                          <%})%>
+                        </select>
+                                          <%const entrada_cargo = bot.guilds.cache.get(guild.id)%>
+
+                       <label for="cargo">Cargo</label><br>
+
+  
+                          
+                        <select class="custom-select" id="cargo" name="cargo" style="width: 175px;">
+                          
+
+               <%  entrada_cargo.roles.cache.forEach(cargos =>{%>
+                       
+
+                          
+                          <%if(cargo){%>
+                                                 <option  value="<%= cargo.id %>"selected >@ <%= cargo.name %></option>
+                          
+
+                          
+
+                          
+
+                                                    <option  value="<%=cargos.id%>">@ <%=cargos.name%></option>
+
+                          
+
+  
+                       <%}else{%>
+                        
+                              <option  value="<%=cargos.id%>">@ <%=cargos.name%></option>
+                          <%}%>
+  
+
+                          
+
+                          
+                        
+
+                          <%})%>
+                          
+                  </select>
+
+                          
+                        </div>
+
+                      </div>
+                    <div class="row">
+                      <div class="col-md-12">
+                          <div class="form-group">
+                            <small class="bmd-label-floating" style="font-size: 12px;"> 
+                        
+                                       Nessa opção você irá poder selecionar a mensagem que será utilizada quando um membro entrar no servidor.</small>
+                          </div>
+                      </div>
+                    </div>     
+                      <div class="col-md-12">
+
+                        <div class="form-group">
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+        </div>
+
+    </div>
+
+  </div>
+
+<br>
+                          
+        <div class="container-fluid">
+
+          <div class="row">
+
+            <div class="col-md-8">
+
+              <div class="card">
+
+                <div class="card-header card-header-primary">
+
+                  <h4 class="card-title" style= "color: black;"
+
+>Editar Mensagem</h4>
+
+                </div>
+
+                <div class="card-body">
+
+                  
+
+                      <div class="col-md-12">
+
+                        <div class="form-group">
+                          <label class="bmd-label-floating"><small style="font-size: 15px;">Mensagem de saida</small></label>
+
+                          <textarea class="form-control" rows="3" id="mensagem_saida" name= "mensagem_saida"><%= mensagem_saida %></textarea>
+
+                        </div>
+
+                      </div>
+
+                    
+
+                        
+
+                    <%const saida = bot.guilds.cache.get(guild.id)%>
+
+                      <div class="form-group">
+
+                        <label for="canal_saida" >Canal</label><br>
+
+                        <select class="custom-select" id="canal_saida" name= "canal_saida" style="width: 175px;">
+                          
+
+                          <%saida.channels.cache.forEach(channel => {%>
+
+                          <%if(channel.type !== "category"){%>
+
+                      <%if(canal2){%>
+
+                            
+                     <option  value="<%= canal2.id %>"selected ># <%= canal2.name %></option>
+
+
+
+                            <option value="<%=channel.id%>"># <%=channel.name%></option>
+      
+             <% }else{%>
+                           <option value="<%=channel.id%>"># <%=channel.name%></option>
+                          
+      <%}%>
+                          
+
+                          <%}%>
+
+                          <%})%>
+                        </select>
+
+                      </div>
+
+                      </div>
+
+                    <div class="row">
+
+                      <div class="col-md-12">
+
+                          <div class="form-group">
+
+                            <small class="bmd-label-floating" style="font-size: 12px;"> Nessa opção você irá poder selecionar a mensagem que será utilizada quando um membro sair do servidor.</small>
+     <button id="bt" name="emit" <% emit == "sim" %>>Testar mensagem</button>
+                          </div>
+
+                      </div>
+
+                    </div>     
+                                  </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+        </div>
+
+    </div>
+
+  </div>
+<br>
+     <button class="btn btn-primary btn-block" type="submit"    onclick="md.showNotification('top','center')" id="salvar">Salvar</button>
+
+       
+                  </form>
+              <br>
+
+  <p>Placeholders</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Placeholder</th>
+            <th>Significado</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><code>{username}</code></td>
+            <td>Mostra o nome do usuário</td>
+        </tr>
+        <tr>
+            <td><code>{user}</code></td>
+            <td>Menciona o usuário</td>
+        </tr>
+        <tr>
+            <td><code>{guild}</code></td>
+            <td>Mostra o nome do servidor</td>
+        </tr>
+        <tr>
+            <td><code>{memberCount}</code></td>
+            <td>Mostra a quantidade de membros do servidor</td>
+        </tr>
+        <tr>
+            <td><code>{userAvatar}</code></td>
+            <td>Mostra a url do avatar do usuário</td>
+        </tr>
+        <tr>
+            <td><code>{tag}</code></td>
+            <td>Mostra a tag do usuário</td>
+        </tr>
+    </tbody>
+</table>
+  <!-- Inclusão do jQuery-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+
+
+
+<!-- Inclusão do Plugin jQuery Validation-->
+
+<script src="http://jqueryvalidation.org/files/dist/jquery.validate.js"></script>
+
+        <!-- Inclusão do Plugin /bootstrap-notify -->
+
+        <script src="assets/js/plugins/bootstrap-notify.js"></script>
+
+
+    <script>
+      $(document).ready(function () {
+      $("#salvar").on('click', function(e){
+        
+        e.preventDefault()
+            var canal = document.getElementById("canal_saida").value
+           var guild = <%= guild.id %>
+        $.ajax({
+        method: "POST",
+          url: `/dashboard/${guild}/welcome`,
+          data: {
+            guild: window.location.href.split("/")[4],
+        mensagem_entrada: $("#menssagem_entrada").val(),
+            mensagem_saida: $("#menssagem_saida").val(),
+            canal_saida: document.getElementById("canal_saida").value,
+            canal_entrada: document.getElementById("canal_entrada").value,
+
+            cargo: document.getElementById("cargo").value
+
+          }
+        }).done(function(err){
+          alert("alguma coisa deu errado" )
+        })
+      })
+        
+    
+     })
+  </script>
+<script>
+
+window.setTimeout(function() {
+
+    $(".alert").fadeTo(500, 0).slideUp(500, function(){
+
+        $(this).remove(); 
+
+    });
+
+}, 10000);
+
+</script>
+
+
+ 
+  <script>
+    $(document).ready(function() {
+      // Javascript method's body can be found in assets/js/demos.js
+      
+    });
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<!-- anúncios -->
+
+<ins class="adsbygoogle"
+
+     style="display:block"
+
+     data-ad-client="ca-pub-5060094133374811"
+
+     data-ad-slot="5415636108"
+
+     data-ad-format="auto"
+
+     data-full-width-responsive="true"></ins>
+
+<script>
+
+     (adsbygoogle = window.adsbygoogle || []).push({});
+
+</script>
+
+  </body>
+
+</div>
